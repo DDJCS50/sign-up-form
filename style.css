@@ -56,6 +56,16 @@ table {
   box-sizing: border-box;
 }
 
+a {
+  color: white;
+}
+
+@font-face {
+  font-family: "norsebold";
+  src: url("./Fonts/norse-bold-webfont.woff2") format("woff2"), url("./Fonts/norse-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 body {
   min-height: 100vh;
 }
@@ -83,10 +93,37 @@ main > div:first-child {
   background-image: url(./leaf-background.jpg);
   background-size: cover;
   flex: 1.25;
+  flex-direction: column;
+  gap: 550px;
+  justify-content: flex-end;
 }
 main > div + div {
   background-color: aliceblue;
   flex: 2;
+}
+main > div > div > p {
+  font-family: "norsebold";
+  font-size: 5rem;
+  color: white;
+}
+main > div > div > img {
+  height: 7rem;
+  width: 5rem;
+}
+main > div > div {
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+main > div > p {
+  color: white;
+  justify-content: center;
+  display: flex;
+  font-size: 0.75rem;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
 }
 
 html {
