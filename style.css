@@ -114,6 +114,11 @@ main > div:last-child > div:first-child > p {
   max-width: 44rem;
   line-height: 1.5rem;
 }
+main > div:last-child > div:last-child > p {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 48px;
+  margin-right: auto;
+}
 main > div:first-child > div > p {
   font-family: "norsebold";
   font-size: 5rem;
