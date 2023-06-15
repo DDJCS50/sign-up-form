@@ -99,37 +99,124 @@ main {
         flex: 2;
 		flex-direction: column;
 		justify-content: center;
+		gap: 16px;
 		a {
-			color: darkgreen;
+			color: #596D48;
 			font-family: Arial, Helvetica, sans-serif;
 			font-weight: bolder;
 			text-decoration: none;
 		}
 
-		> div:first-child > p {
-			padding: 48px;
-			margin-right: auto;
-			max-width: 44rem;
-			line-height: 1.5rem;
-		}
-
 		> div:last-child > p {
 			font-family: Arial, Helvetica, sans-serif;
 			padding: 48px;
+			padding-top: 12px;
 			margin-right: auto;
 		}
 
 		> div:nth-child(2) {
 			flex-direction: column;
+			max-width: 50vw;
 			> p {
 				font-family: Arial, Helvetica, sans-serif;
 				font-weight: bolder;
+				padding: 48px;
+				padding-bottom: 0;
+				margin-right: auto;
 			}
 		}
 
-		form > div {
-			flex-wrap: wrap;
+		form > div:first-child {
+			flex-direction: column;
+			max-width: 50vw;
+			padding: 48px;
+			padding-top: 24px;
+			padding-bottom: 24px;
+			margin-right: auto;
+			font-family: Arial, Helvetica, sans-serif;
+			box-shadow: 0 8px 4px -4px lightgray, 0 -4px 4px -4px lightgray;
+			> div {
+				flex-wrap: wrap;
+				max-width: 30rem;
+				margin-right: auto;
+				font-family: Arial, Helvetica, sans-serif;
+				column-gap: 48px;
+				row-gap: 12px;
+			}
+
+			> p {
+				font-weight: bold;
+				padding-bottom: 24px;
+				font-size: 1.25rem;
+			}
+
+			> div > div {
+				flex-direction: column;
+				font-size: .5rem;
+				font-weight: bold;
+				label {
+					letter-spacing: .08rem;
+				}
+
+				input {
+					min-height: 1.75rem;
+					min-width: 13rem;
+					outline: none;
+					border: 1px solid lightgray;
+					border-radius: 4px;
+				}
+
+				input:focus {
+					border: 1px solid blue;
+					border-radius: 4px;
+					box-shadow: 0 8px 4px -4px lightgray, 0 -4px 4px -4px lightgray;
+				}
+
+				input:invalid {
+					border: 1px solid red;
+					border-radius: 4px;
+					box-shadow: 0 8px 4px -4px lightgray, 0 -4px 4px -4px lightgray;
+				}
+
+				input:valid + div {
+					display: none;
+					visibility: hidden;
+				}
+
+				input:invalid + div {
+					display: flex;
+					visibility: visible;
+					color: red;
+					font-size: .65rem;
+					padding-top: 4px;
+					font-weight: 300;
+				}
+			}
+		}
+
+		form > div:last-child {
+			flex-direction: column;
 			max-width: 44rem;
+			margin-right: auto;
+			padding: 48px;
+			padding-top: 24px;
+			padding-bottom: 0;
+			font-family: Arial, Helvetica, sans-serif;
+			button {
+				background-color: #596D48;
+				padding: 48px;
+				padding-top: 14px;
+				padding-bottom: 14px;
+				border-radius: 8px;
+				color: white;
+				font-weight: bolder;
+				display: inline-block;
+				border: none;
+				margin: 0;
+				text-decoration: none;
+				cursor: pointer;
+				text-align: center;				
+			}
 		}
     }
 
@@ -175,8 +262,17 @@ body {
 	font-family: Arial, Helvetica, sans-serif;
 	color: black;
 	font-weight: bolder;
+	padding: 48px;
+	margin-right: auto;
+	max-width: 44rem;
+	line-height: 1.5rem;
 }
 
 em {
 	font-style: italic;
+}
+
+.hidden {
+	display: none;
+	visibility: hidden;
 }
