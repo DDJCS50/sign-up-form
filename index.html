@@ -31,7 +31,59 @@
             <div>
                 <p>Let's do this!</p>
                 <div>
-                    <!-- form with submit button -->
+                    <form action="#">
+                        <div>
+                            <div>
+                                <label for="firstName">FIRST NAME</label>
+                                <div>
+                                    <input pattern="/^[a-z ,.'-]+$/i" type="text">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="lastName">LAST NAME</label>
+                                <div>
+                                    <input pattern="/^[a-z ,.'-]+$/i" type="text">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="email">EMAIL</label>
+                                <div>
+                                    <input pattern="([a-zA-Z0-9\\_\\-\\.]+)@([a-zA-Z]+).(.+)" type="email">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="phoneNumber">PHONE NUMBER</label>
+                                <div>
+                                    <input pattern=".?(\\d{3}).*(\\d{3}).*(\\d{4})" type="tel">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="password">PASSWORD</label>
+                                <div>
+                                    <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$" type="password">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="confirmPassword"> CONFIRM PASSWORD</label>
+                                <div>
+                                    <input pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$" type="password">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                            <div>
+                                <label for="submitButton"></label>
+                                <div>
+                                    <input type="submit">
+                                </div>
+                                <div>Error Text</div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div>
